@@ -1,0 +1,16 @@
+{
+  "name": "proj1",
+  "version": "0.0.1",
+  "description": "My First Project",
+  "main": "gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "grunt": "~0.4.1",
+    "express": "~3.4.4"
+  }
+}
