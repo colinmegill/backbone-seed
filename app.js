@@ -56,7 +56,6 @@ var ingredients = [
 	{name: "", category: "", store: "PCC", eater: "all", season: "1234"},
 	{name: "", category: "", store: "PCC", eater: "all", season: "1234"},
 
-
 ]
 
 
@@ -64,6 +63,11 @@ app.get("/hello", function(req, res) {
     res.send("Hello, Christie!");
     console.log(res)
 });
+
+app.get("/ingredients", function(req, res){
+		res.send(ingredients);
+});
+
 
 var port = process.env.PORT || 3000;
 app.listen(port);
