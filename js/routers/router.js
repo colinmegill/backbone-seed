@@ -18,6 +18,8 @@ epicurian.Router = Backbone.Router.extend({
                 epicurian.ingredientsView3 = new epicurian.IngredientsView({
                     model: epicurian.ingredients3
                 })
+                epicurian.ingredientsView3.render()
+                $('body').append(epicurian.ingredientsView3.$el)
             }
         });
 
