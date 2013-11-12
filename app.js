@@ -60,8 +60,9 @@ var ingredients = [
 ]
 
 
-app.get("/", function(req, res) {
+app.get("/hello", function(req, res) {
     res.send("Hello, Christie!");
+    console.log(res)
 });
 
 var port = process.env.PORT || 3000;
