@@ -1,1 +1,1 @@
-var APP = window.APP = {};
+var epicurian = window.epicurian = {};

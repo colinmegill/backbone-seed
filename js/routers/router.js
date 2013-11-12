@@ -1,20 +1,35 @@
-APP.Router = Backbone.Router.extend({
+epicurian.Router = Backbone.Router.extend({
     routes: {
-        "first": "firstRoute",
-        "second": "secondRoute"
+        "hello": "hello",
+        "ingredients": "ingredients"
     },
 
-    firstRoute: function() {
-        console.log("firstRoute() was hit.");
-        APP.usersCollection = new APP.Users();
-        APP.usersCollection.create({name:"colin", phone:"555-555-5555"});
-        APP.usersCollection.create({name:"dan", address:"seattle"});
+    hello: function() {
+        console.log("hello() was hit. sanity check.");
     },
 
-    secondRoute: function() {
-        console.log("secondRoute() was hit.");
+    ingredients: function(id) {
+        console.log("ingredients() was hit.");
+ 
+        epicurian.ingredients = new epicurian.Ingredients();
+        epicurian.ingredients.fetch({
+            success: function(){
+                epicurian.ingredients3 = epicurian.ingredients.get(3)
+                epicurian.ingredientsView3 = new epicurian.IngredientsView({
+                    model: epicurian.ingredients3
+                })
+            }
+        });
+
+        console.log(epicurian.ingredients.get(3))
+        console.log(epicurian.ingredients.get(5))
+        console.log(epicurian.ingredients.get(7))
+
+        
+
+        //epicurian.ingredientsView3.render();
     }
 });
 
-APP.router = new APP.Router();
+epicurian.router = new epicurian.Router();
 Backbone.history.start({root: "/"});
