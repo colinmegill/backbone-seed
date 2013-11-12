@@ -6,8 +6,8 @@ var app = express()
                                 path.join(__dirname, "bower_components"),
                                 path.join(__dirname, "js")));
 
-app.get("/hello", function(req, res) {
-    res.send("Hello, World!");
+app.get("/", function(req, res) {
+    res.send("Hello, Christie!");
 });
 
 var port = process.env.PORT || 3000;
